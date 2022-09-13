@@ -20,19 +20,19 @@ class DecidaPorMim:
         layout =[
             [sg.Text('Faça uma Pergunta:')],
             [sg.Input()],
-            [sg.Output(size=(10,10))],
-            [sg.Button('Decida Por Mim !!')]
+            [sg.Output(size=(50,10))],
+            [sg.Button('Decida Por Mim')]
         
          ]
         # Criar uma janela
-        self.janela = sg.Window('Decida Por Mim!!', layout = layout)
+        self.janela = sg.Window('Decida Por Mim', layout = layout)
 
         while True:
             #Ler os valores
             self.eventos, self.valores = self.janela.Read()
 
             #Fazer algo com o valores
-            if self.eventos == 'Decida por mim':
+            if self.eventos == 'Decida Por Mim':
                 print(random.choice(self.respostas))
 
 decida = DecidaPorMim()
